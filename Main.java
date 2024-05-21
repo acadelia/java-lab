@@ -32,7 +32,7 @@ public class Main {
 
     public static void exempluAccesareElementInexistent() {
         try {
-            int[] tablou = {1, 2, 3};
+            int[] tablou = { 1, 2, 3 };
             int valoare = tablou[3];
             System.out.println("Valoarea din tablou este: " + valoare);
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -60,6 +60,7 @@ public class Main {
         }
     }
 
+    @SuppressWarnings("null")
     public static void exempluApelareMetodaReferintaNula() {
         try {
             String text = null;
@@ -80,19 +81,19 @@ public class Main {
     }
 
     // public static void exempluImpartireLaZero() {
-    //     try {
-    //         int rezultat = impartireLaZero(10, 0);
-    //         System.out.println("Rezultatul împărțirii este: " + rezultat);
-    //     } catch (ArithmeticException e) {
-    //         System.out.println("Eroare: Împărțirea la zero nu este permisă.");
-    //     }
+    // try {
+    // int rezultat = impartireLaZero(10, 0);
+    // System.out.println("Rezultatul împărțirii este: " + rezultat);
+    // } catch (ArithmeticException e) {
+    // System.out.println("Eroare: Împărțirea la zero nu este permisă.");
+    // }
     // }
 
-public static int impartireLaZero(int x, int y) {
-    return x / y;
-}
-    
-public static int inmultire(int x, int y) {
+    public static int impartireLaZero(int x, int y) {
+        return x / y;
+    }
+
+    public static int inmultire(int x, int y) {
         return x * y;
     }
 
@@ -109,4 +110,3 @@ class DepasireLimitaException extends Exception {
         super(mesaj);
     }
 }
-
